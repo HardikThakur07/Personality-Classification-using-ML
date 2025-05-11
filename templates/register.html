@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 420px;
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 1s ease;
+    }
+
+    .card h3 {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #f0f0f0;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #fff;
+    }
+
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .btn-primary {
+      border-radius: 10px;
+      font-weight: 600;
+      background-color: #4c00ff;
+      border: none;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(76, 0, 255, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      background-color: #3a00cc;
+    }
+
+    .link-text {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .link-text a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #ffbaba;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Create an Account</h3>
+    <form method="post">
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" required>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </form>
+    <div class="feedback" id="feedbackMsg">Email already registered</div>
+    <div class="link-text">
+      Already have an account? <a href="/login">Login here</a>
+    </div>
+  </div>
+
+  <script>
+    // To display feedback, use:
+    // document.getElementById('feedbackMsg').style.display = 'block';
+  </script>
+
+</body>
+</html>

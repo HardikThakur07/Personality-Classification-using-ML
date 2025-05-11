@@ -1,0 +1,10 @@
+Flask
+matplotlib==3.5.3
+pandas==1.3.5
+
+
+
+Flask-Login
+Flask-SQLAlchemy
+PyMySQL
+Werkzeug
